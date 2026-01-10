@@ -1,0 +1,13 @@
+:root{
+    --bg:#0f172a;
+    --bg-secondary:#020617;
+    --text:#f8fafc;
+    --accent: rgb(241, 4, 4);
+}
+
+[data-theme="light"]{
+    --bg:#f8fafc;
+    --bg-secondary:#e5e7eb;
+    --text:#000000;
+    --accent:#000000;
+}
