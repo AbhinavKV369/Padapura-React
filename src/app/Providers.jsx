@@ -1,10 +1,13 @@
-import React from 'react'
-import { ThemeProvider } from '../context/themeContext/ThemeProvider'
+import React from "react";
+import { ThemeProvider } from "../context/themeContext/ThemeProvider";
+import { FavouriteProvider } from "../context/favouriteContext/favouriteProvider";
 
-const Providers = ({children}) => {
+const Providers = ({ children }) => {
   return (
-    <ThemeProvider>{children}</ThemeProvider>
-  )
-}
+    <ThemeProvider>*
+      <FavouriteProvider> {children}</FavouriteProvider>
+    </ThemeProvider>
+  );
+};
 
-export default Providers
+export default Providers;
