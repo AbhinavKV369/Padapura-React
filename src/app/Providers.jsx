@@ -4,7 +4,7 @@ import { FavouriteProvider } from "../context/favouriteContext/favouriteProvider
 
 const Providers = ({ children }) => {
   return (
-    <ThemeProvider>*
+    <ThemeProvider>
       <FavouriteProvider> {children}</FavouriteProvider>
     </ThemeProvider>
   );

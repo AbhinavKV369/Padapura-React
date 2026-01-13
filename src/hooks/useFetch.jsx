@@ -22,7 +22,7 @@ const useFetch = (fetchFunction,dependencies=[]) =>{
         return () =>{
             isMounted(false);
         }
-    },[dependencies]);
+    },dependencies);
     return {data,loading,error}
 }
 
