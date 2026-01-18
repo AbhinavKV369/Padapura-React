@@ -14,7 +14,7 @@ import {
   getTopRatedMovies,
   getTrendingIndiaMovies,
   getTrendingMovies,
-  getUpcomingMovies,
+  getUpcomingMovies, 
 } from "../../../api/moviesApi";
 
 export const fetchTrendingMovies = () => {

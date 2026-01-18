@@ -6,7 +6,7 @@ export const getTrendingMovies = () =>
      apiClient("/trending/movie/week");
 
 export const getPopularMovies = (page = 1) =>
-  apiClient(`/movie/popular?page=${page}`);
+  apiClient(`/movie/popular?language=en-US&page=${page}`);
 
 export const getTopRatedMovies = (page = 1) =>
   apiClient(`/movie/top_rated?page=${page}`);

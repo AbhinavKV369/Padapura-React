@@ -1,13 +1,25 @@
-:root{
-    --bg:#0f172a;
-    --bg-secondary:#020617;
-    --text:#f8fafc;
-    --accent: rgb(241, 4, 4);
+:root {
+    --bg: #0b0c10;
+    /* darker cinematic black */
+    --bg-secondary: #1f1f1f;
+    /* slightly lighter for nav/footer */
+    --text: #f8f8f8;
+    /* soft white text */
+    --text-muted: #b0b0b0;
+    /* muted text for metadata */
+    --accent: #e50914;
+    /* Netflix-style red */
+    --accent-hover: #ff1c30;
+    /* brighter on hover */
+    --shadow: rgba(0, 0, 0, 0.5);
 }
 
-[data-theme="light"]{
-    --bg:#f8fafc;
-    --bg-secondary:#e5e7eb;
-    --text:#000000;
-    --accent:#000000;
+[data-theme="light"] {
+    --bg: #f8fafc;
+    --bg-secondary: #e5e7eb;
+    --text: #000000;
+    --text-muted: #4b5563;
+    --accent: #000000;
+    --accent-hover: #1a1a1a;
+    --shadow: rgba(0, 0, 0, 0.2);
 }

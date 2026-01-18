@@ -6,7 +6,7 @@ const useFetch = (fetchFunction,dependencies=[]) =>{
     const [error,setError] = useState(null);
 
     useEffect(()=>{
-       const isMounted = true;
+       let isMounted = true;
         const fetchData = async () => {
           try {
             setLoading(true);
@@ -18,12 +18,15 @@ const useFetch = (fetchFunction,dependencies=[]) =>{
             if(isMounted) setLoading(false)
           }
         };
+
         fetchData();
+
         return () =>{
-            isMounted(false);
+            isMounted = false;
         }
     },dependencies);
     return {data,loading,error}
 }
 
 export default useFetch;
+

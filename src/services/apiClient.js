@@ -2,7 +2,7 @@ const BASE_URL = import.meta.env.VITE_TMDB_BASE_URL;
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 
 export const apiClient = async(endpoint,options) =>{
-    const url = `${BASE_URL}${endpoint}?${API_KEY}`;
+    const url = `${BASE_URL}${endpoint}&api_key=${API_KEY}`;
     try {
         const response = await fetch(url,options);
         if(!response.ok){
