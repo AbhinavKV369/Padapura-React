@@ -6,8 +6,11 @@ import {
   getHindiMovies,
   getKannadaMovies,
   getMalayalamMovies,
+  getMovieCredits,
+  getMovieDetails,
   getPopularMovies,
   getRomanticMovies,
+  getSimilarMovies,
   getTamilMovies,
   getTeluguMovies,
   getThrillerMovies,
@@ -80,3 +83,15 @@ export const fetchCriticallyAcclaimedMovies = (page = 1) => {
 export const fetchHiddenGemMovies = (page = 1) => {
   return getHiddenGemMovies(page);
 };
+
+export const fetchMovieDetails = (id) =>{
+  return getMovieDetails(id)
+};
+
+export const fetchMovieCredits = (id) =>{
+  return getMovieCredits(id);
+}
+
+export const fetchSimilarMovies = (id) =>{
+  return getSimilarMovies(id)
+}
