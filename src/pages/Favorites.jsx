@@ -1,9 +1,20 @@
-import React from 'react'
+import { useFavorites } from "../../../context/FavoritesContext";
+import MovieGrid from "../features/movies/components/MovieGrid";
 
 const Favorites = () => {
+  const { favorites, clearFavorites } = useFavorites();
+
+  if (!favorites.length) {
+    return <p>No favorite movies yet ❤️</p>;
+  }
+
   return (
-    <div>Favorites</div>
-  )
-}
+    <div>
+      <h2>Your Favorites</h2>
+      <button onClick={clearFavorites}>Clear All</button>
+      <MovieGrid movies={favorites} />
+    </div>
+  );
+};
 
 export default Favorites;
