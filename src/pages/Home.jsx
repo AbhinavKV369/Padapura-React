@@ -1,10 +1,15 @@
 import React from "react";
 import { useFavourites } from "../context/favouriteContext/useFavourite";
 
-  const sample = { id: 1, title: "Sample Movie" };
+const sample = { id: 1, title: "Sample Movie" };
 
 const Home = () => {
-  const { favourites,handleAddFavourite, handleRemoveFavourite,handleClearAllFavourites } = useFavourites();
+  const {
+    favourites,
+    handleAddFavourite,
+    handleRemoveFavourite,
+    handleClearAllFavourites,
+  } = useFavourites();
   return (
     <>
       <div>Home Page</div>
@@ -18,7 +23,7 @@ const Home = () => {
         Clear favourites
       </button>
       <h3>Favourites:</h3>
-      {favourites.map((movie)=>(
+      {favourites.map((movie) => (
         <h1 key={movie.id}>{movie.id}</h1>
       ))}
     </>

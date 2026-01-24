@@ -2,8 +2,7 @@ import { apiClient } from "../services/apiClient";
 
 // World Movies
 
-export const getTrendingMovies = () =>
-     apiClient("/trending/movie/week");
+export const getTrendingMovies = () => apiClient("/trending/movie/week");
 
 export const getPopularMovies = (page = 1) =>
   apiClient(`/movie/popular?language=en-US&page=${page}`);
@@ -21,7 +20,7 @@ export const getTrendingIndiaMovies = () =>
 
 export const getIndianMovies = (page = 1) =>
   apiClient(
-    `/discover/movie?with_origin_country=IN&sort_by=popularity.desc&page=${page}`
+    `/discover/movie?with_origin_country=IN&sort_by=popularity.desc&page=${page}`,
   );
 
 // Indian Language Movies
@@ -60,17 +59,17 @@ export const getHorrorMovies = (page = 1) =>
 
 export const getFamilyMovies = (page = 1) =>
   apiClient(
-    `/discover/movie?certification_country=IN&certification.lte=U&page=${page}`
+    `/discover/movie?certification_country=IN&certification.lte=U&page=${page}`,
   );
 
 export const getCriticallyAcclaimedMovies = (page = 1) =>
   apiClient(
-    `/discover/movie?sort_by=vote_average.desc&vote_count.gte=1000&page=${page}`
+    `/discover/movie?sort_by=vote_average.desc&vote_count.gte=1000&page=${page}`,
   );
 
 export const getHiddenGemMovies = (page = 1) =>
   apiClient(
-    `/discover/movie?vote_average.gte=7&vote_count.lte=500&page=${page}`
+    `/discover/movie?vote_average.gte=7&vote_count.lte=500&page=${page}`,
   );
 
 // Movies by ID

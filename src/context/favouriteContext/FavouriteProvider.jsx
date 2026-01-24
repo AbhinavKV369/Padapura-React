@@ -12,10 +12,15 @@ const favouriteReducer = (state, action) => {
         return state;
       }
       return { ...state, favourites: [...state.favourites, action.payload] };
-      case "REMOVE_FROM_FAVOURIE":
-        return  {...state,favourites:state.favourites.filter(movie => movie.id !== action.payload.id)};
-      case "CLEAR_FAVOURITES":
-        return {...state,favourites:[]}
+    case "REMOVE_FROM_FAVOURIE":
+      return {
+        ...state,
+        favourites: state.favourites.filter(
+          (movie) => movie.id !== action.payload.id,
+        ),
+      };
+    case "CLEAR_FAVOURITES":
+      return { ...state, favourites: [] };
   }
 };
 
