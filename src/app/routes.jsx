@@ -4,7 +4,7 @@ import MainLayout from "../components/layout/MainLayout";
 import Home from "../pages/Home";
 import Movies from "../features/movies/pages/Movies";
 import Favourites from "../pages/Favorites";
-import MovieDetails from "../pages/MovieDetails";
+import MovieDetails from "../features/movies/pages/MovieDetails";
 import Search from "../pages/Search";
 import NotFound from "../pages/NotFound";
 

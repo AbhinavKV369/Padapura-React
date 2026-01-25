@@ -1,8 +1,8 @@
-import { useFavorites } from "../../../context/FavoritesContext";
+import { useFavourites } from "../context/favouriteContext/useFavourite";
 import MovieGrid from "../features/movies/components/MovieGrid";
 
 const Favorites = () => {
-  const { favorites, clearFavorites } = useFavorites();
+  const { favorites, clearFavorites } = useFavourites();
 
   if (!favorites.length) {
     return <p>No favorite movies yet ❤️</p>;

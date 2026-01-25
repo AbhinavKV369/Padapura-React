@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import {getImageUrl} from "../../../utils/imageURL"
-import {useFavourites} from "../../../context/favouriteContext"
+import { useFavourites } from "../../../context/favouriteContext/useFavourite";
+
  
 const MovieCard = ({movie}) => {
   const {favourites,addFavourites,removeFavourites} = useFavourites();
