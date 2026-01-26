@@ -66,91 +66,20 @@ header nav a.active {
   }
 }
 
-/* Movie grid (Netflix style) */
-.movie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-  gap: 1.25rem;
-  padding: 1rem 0;
-}
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
 
-/* Movie card style */
-.movie-card {
-  position: relative;
-  border-radius: 0.5rem;
-  overflow: hidden;
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
 
-.movie-card img {
-  width: 100%;
-  display: block;
-  border-radius: 0.5rem;
-  transition: transform 0.3s ease;
-}
+  .card-tilt {
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
 
-.movie-card:hover img {
-  transform: scale(1.05);
-}
-
-.movie-card::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent 60%);
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.movie-card:hover::after {
-  opacity: 1;
-}
-
-.movie-card h3 {
-  font-size: 0.9rem;
-  margin-top: 0.5rem;
-  font-weight: 600;
-  color: var(--text);
-  text-align: center;
-}
-
-/* Rating / Badge */
-.movie-card .rating {
-  position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
-  background: var(--bg-secondary);
-  color: var(--accent);
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.25rem;
-  font-size: 0.75rem;
-  font-weight: bold;
-}
-
-/* Buttons (Play / Trailer) */
-.btn-accent {
-  background: var(--accent);
-  color: #fff;
-  padding: 0.5rem 1rem;
-  border-radius: 0.375rem;
-  font-weight: 600;
-  transition:
-    background 0.3s ease,
-    transform 0.2s ease;
-}
-
-.btn-accent:hover {
-  background: var(--accent-hover);
-  transform: scale(1.05);
-}
-
-.search-input {
-  width: 100%;
-  padding: 0.75rem 1rem;
-  margin: 1rem 0 2rem;
-  border-radius: 6px;
-  border: none;
-  font-size: 1rem;
+  .card-tilt:hover {
+    transform: rotateX(6deg) rotateY(-6deg) translateY(-10px);
+  }
 }

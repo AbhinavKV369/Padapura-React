@@ -43,7 +43,7 @@ export const FavouriteProvider = ({ children }) => {
   };
 
   const value = {
-    favourites: state.favourites,
+    favourites: state.favourites || [],
     handleAddFavourite,
     handleRemoveFavourite,
     handleClearAllFavourites,

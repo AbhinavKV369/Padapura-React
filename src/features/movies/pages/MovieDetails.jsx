@@ -1,6 +1,9 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import useMovieDetails from "../hooks/useMovieDetails";
+import MovieInfo from "../components/MovieInfo";
+import MovieCast from "../components/MovieCast"
+import SimilarMovies from "../components/SimilarMovies";
 
 const MovieDetails = () => {
   const { id } = useParams();

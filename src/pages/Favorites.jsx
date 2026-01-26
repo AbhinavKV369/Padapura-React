@@ -2,17 +2,17 @@ import { useFavourites } from "../context/favouriteContext/useFavourite";
 import MovieGrid from "../features/movies/components/MovieGrid";
 
 const Favorites = () => {
-  const { favorites, clearFavorites } = useFavourites();
+  const { favourites, handleClearAllFavourites } = useFavourites();
 
-  if (!favorites.length) {
+  if (!favourites || favourites.length === 0) {
     return <p>No favorite movies yet ❤️</p>;
   }
 
   return (
     <div>
       <h2>Your Favorites</h2>
-      <button onClick={clearFavorites}>Clear All</button>
-      <MovieGrid movies={favorites} />
+      <button onClick={handleClearAllFavourites}>Clear All</button>
+      <MovieGrid movies={favourites} />
     </div>
   );
 };

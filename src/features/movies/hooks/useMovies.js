@@ -1,11 +1,11 @@
 import { useState } from "react";
-import { fetchPopularMovies } from "../services/movieService";
+import { fetchMalayalamMovies } from "../services/movieService";
 import useFetch from "../../../hooks/useFetch";
 
 const useMovies = () => {
   const [page, setPage] = useState(1);
   const { data, loading, error } = useFetch(
-    () => fetchPopularMovies(page),
+    () => fetchMalayalamMovies(page),
     [page]
   );
 
