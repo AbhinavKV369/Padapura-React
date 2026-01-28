@@ -1,16 +1,10 @@
 :root {
     --bg: #0b0c10;
-    /* darker cinematic black */
     --bg-secondary: #1f1f1f;
-    /* slightly lighter for nav/footer */
     --text: #f8f8f8;
-    /* soft white text */
     --text-muted: #b0b0b0;
-    /* muted text for metadata */
     --accent: #e50914;
-    /* Netflix-style red */
     --accent-hover: #ff1c30;
-    /* brighter on hover */
     --shadow: rgba(0, 0, 0, 0.5);
 }
 

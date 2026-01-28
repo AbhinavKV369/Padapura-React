@@ -1,13 +1,13 @@
-import React from 'react'
-import MovieGrid from "../components/MovieGrid"
+import React from "react";
+import MovieGrid from "../components/MovieGrid";
 
-const SimilarMovies = ({movies}) => {
+const SimilarMovies = ({ movies }) => {
   return (
-   <section>
-    <h3>Similar Movies</h3>
-    <MovieGrid movies={movies} />
-   </section>
-  )
-}
+    <section>
+      <h3>Similar Movies</h3>
+      <MovieGrid movies={movies} />
+    </section>
+  );
+};
 
-export default SimilarMovies
+export default SimilarMovies;
