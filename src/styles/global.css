@@ -55,6 +55,7 @@ header nav a.active {
 }
 
 @keyframes pulse {
+
   0%,
   80%,
   100% {
